@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.css';
+import './Footer.css';
 
-class Header extends React.Component {
+class Footer extends React.Component {
 //   constructor(props) {
 //     super(props);
 //   }
@@ -64,4 +64,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default Footer;

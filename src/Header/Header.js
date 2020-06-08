@@ -5,9 +5,7 @@ import Nav from '../components/Nav/Nav';
 
 
 class Header extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
+
   render() {
     return (
 
@@ -21,7 +19,22 @@ class Header extends React.Component {
         </div>
         <div className="header-nav">
             <div className="container">
-               <Nav />
+                <nav>
+                    <ul className="header__menu">
+                        <Nav
+                            link={'/'}
+                            title={'Главная'}
+                        />
+                        <Nav
+                            link={'/about'}
+                            title={'Пункты обмена'}
+                        />
+                        <Nav
+                            link={'/contacts'}
+                            title={'Контакты'}
+                        />                      
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>

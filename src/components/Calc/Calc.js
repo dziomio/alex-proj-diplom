@@ -18,9 +18,9 @@ static getDerivedStateFromProps(props, state ) {
 CalcForm = e => {
   e.preventDefault();
   let elements = e.target.elements
-  console.log(elements)
-  console.log(elements['count-currency'].value)
-  console.log(elements['type-currency'].value)
+ // console.log(elements)
+  //console.log(elements['count-currency'].value)
+ // console.log(elements['type-currency'].value)
 let countCurrency = elements['count-currency'].value;
 let typeCurrency = elements['type-currency'].value;
 this.setState({result: (countCurrency / this.state.rate[typeCurrency]).toFixed(2)})

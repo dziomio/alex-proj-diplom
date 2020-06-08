@@ -2,11 +2,13 @@ import React from 'react';
 import './App.css';
 import Header from './Header/Header'
 import Rate from './Rate/Rate';
+import Footer from './Footer/Footer';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import About from './About/About';
+import Contacts from './Contacts/Contacts';
 
 class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
   render() {
     return (
     <div className="App">
@@ -14,9 +16,20 @@ class App extends React.Component {
 
         <div className="container">
             <main>
-    
-                <Rate/>
-            
+                
+                    <Route exact
+                        path="/"
+                         component={Rate}
+                    />
+                    <Route exact
+                        path="/about"
+                        component={About}
+                    />
+                    <Route exact
+                        path="/contacts"
+                        component={Contacts}
+                    />
+                   
             </main>
             <div className="container" id="cookie_info">
                 <div className="site-content">
@@ -27,6 +40,7 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
+        <Footer/>
     </div>
   
     );
